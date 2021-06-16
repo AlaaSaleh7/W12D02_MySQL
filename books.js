@@ -37,7 +37,7 @@ const updateBook =(req,res)=>{
 }
 
 const deleteBook =(req,res)=>{
-    const id =req.params.id;
+    const id =req.params.book_id;
     const query = `DELETE FROM books 
     WHERE id =${id} `;
     db.query(query,(err, result) => {
