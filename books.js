@@ -57,7 +57,7 @@ const orderBooks =(req,res)=>{
         res.json(result)
       });
 }
-
+// practice Q4
 const nullPrice =(req,res)=>{
     const query = `SELECT * FROM books WHERE price is null;`;
     db.query(query, (err, result) => {
