@@ -66,8 +66,10 @@ const nullPrice =(req,res)=>{
         res.json(result)
       });
 }
+
+// practice Q5
 const allPrice =(req,res)=>{
-    const query = `SELECT price FROM books WHERE price is not null;`;
+    const query = `SELECT * FROM books WHERE price is not null;`;
     db.query(query, (err, result) => {
         if (err) throw err;
         console.log('RESULT: ', result);
