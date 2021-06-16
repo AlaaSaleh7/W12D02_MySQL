@@ -22,10 +22,13 @@ const allBooks =(req,res)=>{
 }
 
 const updateBook =(req,res)=>{
-    const id =req.params.id;
+    const id =req.params.book_id;
+    console.log(id);
     const { title, author, published_at, price } = req.body;
+    const query = `UPDATE books SET title=?, author=?, published_at=?, price=?
+    WHERE id=${id}`;
+    //console.log(id);
     const arr = [title, author, published_at, price];
-    const query = `UPDATE books SET title=?, author=?, published_at=?, price=? WHERE id=${id}`;
     db.query(query, arr, (err, result) => {
       if (err) throw err;
       res.json(result);
