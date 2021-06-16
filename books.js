@@ -20,7 +20,7 @@ const allBooks =(req,res)=>{
         res.json(result)
       });
 }
-
+// practice Q1
 const updateBook =(req,res)=>{
     const id =req.params.book_id;
     console.log(id);
@@ -35,7 +35,7 @@ const updateBook =(req,res)=>{
     });
     
 }
-
+// practice Q2
 const deleteBook =(req,res)=>{
     const id =req.params.book_id;
     const query = `DELETE FROM books 
@@ -47,7 +47,7 @@ const deleteBook =(req,res)=>{
       });
     
 }
-
+// practice Q3
 const orderBooks =(req,res)=>{
     const query = `SELECT * FROM books
     ORDER BY id DESC;`;
